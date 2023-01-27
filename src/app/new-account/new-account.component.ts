@@ -6,7 +6,8 @@ import { LoggingService } from '../logging.service';
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
   styleUrls: ['./new-account.component.css'],
-//  providers: [LoggingService]
+// providers: [LoggingService]
+// providers: [LoggingService, AccountService] // does not work: each module would have it's own instance!
 })
 export class NewAccountComponent {
   @Output() accountAdded = new EventEmitter<{name: string, status: string}>();
